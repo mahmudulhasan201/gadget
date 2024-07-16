@@ -11,32 +11,43 @@
 
                 
                 <a class="nav-link collapsed" href="{{route('product.list')}}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
                     Products
                 </a>
 
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                <a class="nav-link collapsed" href="{{route('category.list')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-th-large"></i></div>
                     Category
                 </a>
 
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class=""><i class=""></i></div>
+                <a class="nav-link collapsed" href="{{route('product.category.list')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
                     Product Category
                 </a>
 
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class=""><i class=""></i></div>
+                    <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
+                    Order
+                </a>
+
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
+                    Order Details
+                </a>
+
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Customer
                 </a>
 
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class=""><i class=""></i></div>
+                    <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
                     Report
                 </a>
 
+                <hr class="text-white my-2">
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div class=""><i class=""></i></div>
+                    <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                     Logout
                 </a>
 

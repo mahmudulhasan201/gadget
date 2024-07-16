@@ -2,32 +2,43 @@
 
 @section('content')
 <div style="padding-left: 10px;">
-    <h1>Product Form</h1>
+
     <form action="{{route('product.form')}}">
 
         @csrf
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-            </select>
-        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h1><strong>Product Form</strong></h1><br>
 
-        <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
-            <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1"><strong>Product Name</strong></label>
+                        <input required name="product_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1"><strong>Product Category </strong></label>
+                        <input required name="product_category" type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for=""><strong>Product Quantity</strong></label>
+                        <input required name="product_quantity" type="text" class="form-control" id="" placeholder="">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for=""><strong>Product Image</strong></label>
+                        <input required name="product_image" type="file" class="form-control" id="" placeholder="">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1"><strong>Description</strong></label>
+                        <input required name="description" type="text" class="form-control" id="" placeholder="">
+                    </div><br>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>
