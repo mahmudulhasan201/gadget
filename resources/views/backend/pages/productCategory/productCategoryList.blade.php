@@ -8,19 +8,26 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Id</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Discount</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      @foreach($productCategory as $data)
+      <th>{{$data->id}}</th>
+      <td>{{$data->product_name}}</td>
+      <td>{{$data->category_name}}</td>
+      <td>{{$data->discount}}%</td>
+      <td>
+        <a href="{{route('product.category.edit',$data->id)}}" type="button" class="btn btn-success">Edit</a>
+        <a href="{{route('product.category.delete',$data->id)}}" type="button" class="btn btn-danger">Delete</a>
+      </td>
     </tr>
+    @endforeach
   </tbody>
 </table>
 

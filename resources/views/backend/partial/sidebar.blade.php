@@ -4,15 +4,15 @@
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
 
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('dashboard')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
 
-                
+
                 <a class="nav-link collapsed" href="{{route('product.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
-                    Products
+                    Product
                 </a>
 
                 <a class="nav-link collapsed" href="{{route('category.list')}}">
@@ -25,30 +25,42 @@
                     Product Category
                 </a>
 
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
                     Order
                 </a>
 
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
                     Order Details
                 </a>
 
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Customer
                 </a>
+
+                <hr class="text-white my-2">
+                <div class="sb-sidenav-menu-heading">External</div>
 
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                     <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
                     Report
                 </a>
 
-                <hr class="text-white my-2">
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#">
+                    <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                    Discount
+                </a>
+
+                <a class="nav-link collapsed" href="#">
+                    <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                    Setting
+                </a>
+
+                <a class="nav-link collapsed" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
-                    Logout
+                    Sign-Out
                 </a>
 
             </div>
