@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+@notifyCss
 
 @include('backend.partial.header')
 
@@ -19,6 +19,7 @@
                 <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
             </div>
         </form>
+
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
             <li class="nav-item dropdown">
@@ -49,7 +50,7 @@
             @yield('content')
 
 
-            
+
             @include('backend.partial.footer')
 
 
@@ -62,6 +63,8 @@
     <script src="{{url('backend/assets/demo/chart-bar-demo.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="{{url('backend/js/datatables-simple-demo.js')}}"></script>
-</body>
+    @include('notify::components.notify')
+    @notifyJs
 
+</body>
 </html>
