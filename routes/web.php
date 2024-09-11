@@ -4,14 +4,13 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\ProductCategoryController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Frontend\WebHomeController;
 use Illuminate\Support\Facades\Route;
 
 
-
-
-
-
 //Backend
+
+Route::group(['prefix' => 'admin'], function(){ 
 
 Route::get('/',[HomeController::class,'showHomepage'])->name('dashboard');
 
@@ -28,3 +27,9 @@ Route::get('/category/store/form',[CategoryController::class,'storeForm'])->name
 //Product_Category
 Route::get('/product/category',[ProductCategoryController::class,'productCategoryList'])->name('product.category.list');
 Route::get('/product/category/form',[ProductCategoryController::class,'productCategoryForm'])->name('product.category.form');
+
+});
+
+//Frontend
+
+Route::get('/',[WebHomeController::class,'home'])->name('home');
