@@ -35,3 +35,8 @@ Route::get('/category/delete/{id}',[CategoryController::class,'categoryDelete'])
 //Product_Category
 Route::get('/product/category/list',[ProductCategoryController::class,'productCategoryList'])->name('product.category.list');
 Route::get('/product/category/form',[ProductCategoryController::class,'productCategoryForm'])->name('product.category.form');
+});
+
+//Frontend
+
+Route::get('/',[WebHomeController::class,'home'])->name('home');

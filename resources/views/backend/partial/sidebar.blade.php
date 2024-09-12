@@ -9,15 +9,12 @@
                     Dashboard
                 </a>
 
-<<<<<<< HEAD
+
                 <a class="nav-link collapsed" href="{{route('category.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-th-large"></i></div>
                     Category
                 </a>
                 
-=======
-
->>>>>>> 3e33dd453276ae93b87450d28c14e281d9daf9bf
                 <a class="nav-link collapsed" href="{{route('product.list')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
                     Product
