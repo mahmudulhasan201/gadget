@@ -1,24 +1,26 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+
 
 class ProductController extends Controller
 {
     public function productList()
     {
-        $product = Product::all();
+        $product = Product::with('category')->get();
         return view('backend.pages.product.productList', compact('product'));
     }
 
 
     public function productForm()
     {
-        return view('backend.pages.product.productForm');
+        $varProduct = Category::all();
+        return view('backend.pages.product.productForm', compact('varProduct'));
     }
 
     public function storeProductForm(Request $request)
@@ -26,20 +28,25 @@ class ProductController extends Controller
         $checkValidation = Validator::make($request->all(), [
             'product_name' => 'required',
             'product_quantity' => ['required', 'numeric', 'min:1'],
-            'product_image' => 'required',
+            'product_price' => 'required',
+            // 'product_image' => 'required',
             'description' => 'required'
         ]);
         if ($checkValidation->fails()) {
             notify()->error($checkValidation->getMessageBag());
             return redirect()->back();
         }
+        
 
-        Product::create([
+         Product::create([
             'product_name' => $request->product_name,
+            'category_id' => $request->category_id,
             'product_quantity' => $request->product_quantity,
+            'product_price' => $request->product_price,
             'product_image' => $request->product_image,
             'product_description' => $request->description
         ]);
+        
         notify()->success("Product Added Successfully.");
         return redirect()->back();
     }

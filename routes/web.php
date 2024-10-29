@@ -15,14 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'showHomepage'])->name('dashboard');
 
-//Product
-Route::get('/product/list',[ProductController::class,'productList'])->name('product.list');
-Route::get('/product/form',[ProductController::class,'productForm'])->name('product.form');
-Route::post('/product/form',[ProductController::class,'storeProductForm'])->name('product.store.form');
-
-Route::get('/product/edit/{id}',[ProductController::class,'productEdit'])->name('product.edit');
-Route::put('/product/update/{id}',[ProductController::class,'productUpdate'])->name('product.update');
-Route::get('/product/delete/{id}',[ProductController::class,'productDelete'])->name('product.delete');
 
 //Category
 Route::get('/category/list',[CategoryController::class,'categoryList'])->name('category.list');
@@ -33,11 +25,11 @@ Route::get('/category/edit/{id}',[CategoryController::class,'categoryEdit'])->na
 Route::put('/category/update/{id}',[CategoryController::class,'categoryUpadte'])->name('category.update');
 Route::get('/category/delete/{id}',[CategoryController::class,'categoryDelete'])->name('category.delete');
 
-//Product_Category
-Route::get('/product/category/list',[ProductCategoryController::class,'productCategoryList'])->name('product.category.list');
-Route::get('/product/category/form',[ProductCategoryController::class,'productCategoryForm'])->name('product.category.form');
-Route::post('/product/category/form',[ProductCategoryController::class,'storeProductCategoryForm'])->name('store.product.category.form');
+// Product
+Route::get('/product/list',[ProductController::class,'productList'])->name('product.list');
+Route::get('/product/form',[ProductController::class,'productForm'])->name('product.form');
+Route::post('/product/form',[ProductController::class,'storeProductForm'])->name('product.store.form');
 
-Route::get('/product/category/edit/{id}',[ProductCategoryController::class,'productCategoryEdit'])->name('product.category.edit');
-Route::put('/product/category/update/{id}',[ProductCategoryController::class,'productCategoryUpdate'])->name('product.category.update');
-Route::get('/product/category/delete/{id}',[ProductCategoryController::class,'productCategoryDelete'])->name('product.category.delete');
+Route::get('/product/edit/{id}',[ProductController::class,'productEdit'])->name('product.edit');
+Route::put('/product/update/{id}',[ProductController::class,'productUpdate'])->name('product.update');
+Route::get('/product/delete/{id}',[ProductController::class,'productDelete'])->name('product.delete');

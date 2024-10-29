@@ -10,7 +10,9 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Product Name</th>
+      <th scope="col">Category Name</th>
       <th scope="col">Product Quantity</th>
+      <th scope="col">Product Price</th>
       <th scope="col">Product Image</th>
       <th scope="col">Product Description</th>
       <th scope="col">Action</th>
@@ -22,7 +24,9 @@
     <tr>
       <th>{{$data->id}}</th>
       <td>{{$data->product_name}}</td>
+      <td>{{$data->category->category_name}}</td>
       <td>{{$data->product_quantity}}</td>
+      <td>{{$data->product_price}}</td>
       <td>{{$data->product_image}}</td>
       <td>{{$data->product_description}}</td>
       <td>

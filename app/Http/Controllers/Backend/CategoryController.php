@@ -11,21 +11,22 @@ class CategoryController extends Controller
 {
     public function categoryList()
     {
-        $category = Category::all();
+        $category = Category::with('parentCategory')->get();
         return view('backend.pages.category.categoryList', compact('category'));
     }
 
     public function categoryForm()
     {
-        return view('backend.pages.category.categoryForm');
+        $categories=Category::all();
+        return view('backend.pages.category.categoryForm', compact('categories'));
     }
 
     public function storeCategoryForm(Request $request)
     {
         $checkValidation = Validator::make($request->all(), [
             'category_name' => 'required',
-            'category_image' => 'required',
-            'discount' => ['required', 'numeric', 'min:1']
+            // 'category_image' => 'required',
+            // 'discount' => ['required', 'numeric', 'min:1']
         ]);
         if ($checkValidation->fails()) {
             notify()->error($checkValidation->getMessageBag());
@@ -34,6 +35,7 @@ class CategoryController extends Controller
 
         Category::create([
             'category_name' => $request->category_name,
+            'parent_id' => $request->parent_name,
             'catgory_image' => $request->category_image,
             'discount' => $request->discount
         ]);

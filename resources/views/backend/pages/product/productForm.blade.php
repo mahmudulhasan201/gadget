@@ -18,8 +18,23 @@
                     </div><br>
 
                     <div class="form-group">
+                        <label for="exampleFormControlInput1"><strong>Category Name</strong></label>
+                        <select name="category_id" id="" class="form-control">
+                            <option value="">Select Option--</option>
+                            @foreach($varProduct as $data)
+                            <option value="{{$data->id}}">{{$data->category_name}}</option>
+                            @endforeach
+                        </select>
+                    </div><br>
+
+                    <div class="form-group">
                         <label for=""><strong>Product Quantity</strong></label>
                         <input required name="product_quantity" type="text" class="form-control" id="" placeholder="">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for=""><strong>Product Price</strong></label>
+                        <input required name="product_price" type="number" class="form-control" id="" placeholder="">
                     </div><br>
 
                     <div class="form-group">

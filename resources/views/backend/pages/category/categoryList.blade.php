@@ -10,6 +10,7 @@
           <tr>
             <th scope="col">Id </th>
             <th scope="col">Category Name</th>
+            <th scope="col">Parent Category</th>
             <th scope="col">Category Image</th>
             <th scope="col">Discount</th>
             <th scope="col">Action</th>
@@ -21,6 +22,7 @@
             @foreach($category as $data)
             <td>{{$data->id}}</td>
             <td>{{$data->category_name}}</td>
+            <td>{{ $data->parentCategory ? $data->parentCategory->category_name : 'Null' }}</td>
             <td>{{$data->category_image}}</td>
             <td>{{$data->discount}}%</td>
             <td>
